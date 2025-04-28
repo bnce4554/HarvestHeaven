@@ -1,21 +1,22 @@
 
   <app-header></app-header>
-<div class="hatter" style="background-image: url('hatter.jpg');">
+  
+<div class="hatter" style="background-image: url('hero-bg.jpg');">
   <section class="hero">
     <div class="hero-content">
       <h1>Friss Termékek Minden Nap!</h1>
       <h2>Fedezd fel a legjobb zöldségeket és gyümölcsöket.</h2>
-      <button class="cta-btn" href="['/shop']">Kezdj El Vásárolni</button>    </div>
+      <button class="cta-btn" [routerLink]="['/shop']">Kezdj El Vásárolni</button>    </div>
   </section>
 
   <section class="featured-categories">
     <h2>Fedezd fel a kategóriákat</h2>
     <div class="categories">
-      <a href="['/shop']" class="category-card">
+      <a [routerLink]="['/shop']" class="category-card">
         <img src="gyumolcs.jpg"/>
         <h3>Gyümölcsök</h3>
       </a>
-      <a href="['/shop']" class="category-card">
+      <a [routerLink]="['/shop']" class="category-card">
         <img src="vegetables.jpg"/> 
         <h3>Zöldségek</h3>
       </a>
@@ -24,3 +25,6 @@
 </div>
   <app-footer></app-footer>
 
+<script>
+  
+</script>

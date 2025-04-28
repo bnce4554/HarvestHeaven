@@ -15,9 +15,7 @@
   .footer-nav {
     margin-top: 50px;
     font-size: 2rem;
-
-        display: inline-block;
-      
+ display: inline-block;
   }
   
   .footer-nav a {
@@ -29,6 +27,6 @@
   
   .footer-nav a:hover {
     text-decoration: underline;
-    color: #2e632e;
+    color: #2071bd;
   }
   

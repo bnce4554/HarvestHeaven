@@ -55,7 +55,7 @@ import { FormsModule } from '@angular/forms';
     //this.cartService.addToCart(product);
     this.cartService.addToCart(product)
     alert(`${product.termek_nev} hozzáadva a kosárhoz!`);
-  }
+  } 
   termekSzures(): void {
     this.szurtTermek=[];
     for (let i = 0; i < this.termekek.length; i++) {

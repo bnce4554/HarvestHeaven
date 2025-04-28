@@ -4,25 +4,24 @@ import { Router } from '@angular/router';
 import { FooterComponent } from '../footer/footer.component';
 import { HeaderComponent } from '../header/header.component';
 import { FormsModule, NgModel } from '@angular/forms';
-
+import { User } from '../models/user.model';
+import { MatButtonToggle, MatButtonToggleGroup } from '@angular/material/button-toggle';
 
 @Component({
   selector: 'app-register',
-  imports: [FormsModule, FooterComponent, HeaderComponent],
+  imports: [FormsModule, FooterComponent, HeaderComponent,MatButtonToggle,MatButtonToggleGroup],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })
 export class RegisterComponent {
-  name = '';
-  email = '';
-  password = '';
+  user:User = {nev:'',adoszam:'',telefonszam:'',jelszo:'',felhasznaloTipus:''}
   constructor(private authService: AuthService, private router: Router) {}
 
   register() {
-    this.authService.register(this.name, this.email, this.password).subscribe({
+    this.authService.register(this.user).subscribe({
       next: (response) => {
         localStorage.setItem('token', response.token);
-        this.router.navigate(['/shop']);
+        this.router.navigate(['/login']);
       },
 
     });

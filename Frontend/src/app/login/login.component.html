@@ -2,9 +2,11 @@
    <div class="login-container">
   <h2>Bejelentkezés</h2>
   <form (submit)="login()">
-    <input type="tel" placeholder="telefonszam" [(ngModel)]="user.telefonszam" required />
-    <input type="password" placeholder="Jelszó" [(ngModel)]="user.jelszo" required />
+    <input type="text" name="nev" placeholder="Név" [(ngModel)]="user.nev" required />
+    <input type="password" name="jelszo" placeholder="Jelszó" [(ngModel)]="user.jelszo" required />
     <button type="submit">Bejelentkezés</button>
+
   </form>
+  <button (click)="logout()">Kijelentkezés</button>
 </div>
 <app-footer></app-footer>
