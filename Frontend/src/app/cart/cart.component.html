@@ -14,13 +14,13 @@
 		<div class="cart-items">
 		  <div class="cart-item" *ngFor="let item of kosarTartalom">
 			<div class="item-image">
-			  <img [src]="item.image" alt="{{ item.name }}">
+			  <img [src]="item.image" alt="{{ item.termek_nev}}">
 			</div>
   
 			<div class="item-details">
-			  <h3>Név</h3>
-			  <p><strong>Kiszerelés:</strong></p>
-			  <p><strong>Eredet:</strong></p>
+			  <h3>Név: {{item.termek_nev}}</h3>
+			  <p><strong>Minőség:  {{item.minoseg}}</strong></p>
+			  <p><strong>Eredet: {{item.szarmazasi_orszag}}</strong></p>
   
 			  <div class="item-quantity">
 				<button (click)="darabszamCsokken(item)">-</button>

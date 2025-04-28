@@ -16,6 +16,7 @@
   }
   
   .nav-links {
+    
     list-style: none;
     display: flex;
     gap: 20px;
@@ -35,7 +36,7 @@
   }
   
   .nav-links a:hover {
-    color: #ffcc00;
+    color: #2e632e;
   }
   
   @media (max-width: 768px) {

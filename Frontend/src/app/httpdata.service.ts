@@ -19,11 +19,11 @@ export class HttpdataService {
 
   gettermek(): Observable<Termek[]>
   {
-    return this.http.get<Termek[]>("http://127.0.0.1:8000/api/termek");
+    return this.http.get<Termek[]>("http://127.0.0.1:8000/api/termekek");
   }
   gethirdetes(): Observable<Hirdetes[]>
   {
-    return this.http.get<Hirdetes[]>("http://127.0.0.1:8000/api/hirdetes");
+    return this.http.get<Hirdetes[]>("http://127.0.0.1:8000/api/hirdetesek");
   }
   getrendelesek(): Observable<Rendelesek[]>
   {

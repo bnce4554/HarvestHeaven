@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Termek } from './models/termek.model';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +8,16 @@ export class CartService {
   private cartKey = 'shopping_cart';
 
   constructor() {}
-
+ /* stored:Termek[] = [];
+  storeItem(itemToStore:Termek):any{
+    this.stored.push(itemToStore)
+  }
+  getCart(){
+    return this.stored;
+  }
+  clearCart(){
+    this.stored = [];
+  }*/
   getCart(): any[] {
     const cart = localStorage.getItem(this.cartKey);
     return cart ? JSON.parse(cart) : [];

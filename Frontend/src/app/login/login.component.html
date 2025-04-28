@@ -2,7 +2,7 @@
    <div class="login-container">
   <h2>Bejelentkezés</h2>
   <form (submit)="login()">
-    <input type="email" placeholder="Email" [(ngModel)]="user.email" required />
+    <input type="tel" placeholder="telefonszam" [(ngModel)]="user.telefonszam" required />
     <input type="password" placeholder="Jelszó" [(ngModel)]="user.jelszo" required />
     <button type="submit">Bejelentkezés</button>
   </form>

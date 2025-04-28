@@ -10,30 +10,36 @@ import { NgFor } from '@angular/common';
 import { FooterComponent } from '../footer/footer.component';
 import { HeaderComponent } from '../header/header.component';
 import { CartService } from '../cart.service';
-
-
-interface Product {
-  id: number;
-  name: string;
-  price: number;
-  image: string;
-}
+import { User } from '../models/user.model';
+import { MatButtonToggle, MatButtonToggleGroup } from '@angular/material/button-toggle';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-shop',
   templateUrl: './shop.component.html',
   styleUrls: ['./shop.component.scss'],
-  imports:[ NgFor, MatCardModule, MatButtonModule, MatToolbarModule, CommonModule, FooterComponent, HeaderComponent]
+  imports:[ NgFor,MatButtonToggleGroup,MatButtonToggle, MatCardModule, MatButtonModule, MatToolbarModule, CommonModule, FooterComponent, HeaderComponent, FormsModule]
 })
 
-export class ShopComponent implements OnInit {
+ export class ShopComponent{
   termekek: Termek[] = [];
+  felhasznalo: User[] = [];
+  szurtTermek: Termek[] = [];
+  kivalasztottKategoria:string = "Minden termék";
+  keresesTermek: Termek[] = [];
+  rendezesTermek: Termek[] = [];
+  kategoria: Termek[] = [];
 
   constructor(private httpService: HttpdataService, private cartService: CartService) {}
 
+
   ngOnInit(): void {
-    this.loadtermek();
+    this.httpService.gettermek().subscribe(data => {
+      this.termekek = data;
+      console.log(data);
+    });
   }
+  
 
   loadtermek(): void {
     this.httpService.gettermek().subscribe(
@@ -45,10 +51,19 @@ export class ShopComponent implements OnInit {
       }
     );
   }
-
-  addToCart(product: Product): void {
-    this.cartService.addToCart(product);
-    alert(`${product.name} hozzáadva a kosárhoz!`);
+  addToCart(product: Termek): void {
+    //this.cartService.addToCart(product);
+    this.cartService.addToCart(product)
+    alert(`${product.termek_nev} hozzáadva a kosárhoz!`);
+  }
+  termekSzures(): void {
+    this.szurtTermek=[];
+    for (let i = 0; i < this.termekek.length; i++) {
+      if (this.kivalasztottKategoria == this.termekek[i].kategoria) {
+        this.szurtTermek.push(this.termekek[i]);
+      }
+      
+    }
   }
 }
 

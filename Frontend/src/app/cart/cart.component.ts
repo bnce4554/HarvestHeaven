@@ -36,7 +36,7 @@ export class CartComponent implements OnInit {
 
   eltavolitas(item: any): void {
     this.kosarTartalom = this.kosarTartalom.filter(cartItem => cartItem !== item);
-    this.cartService.updateCart(this.kosarTartalom);
+    //this.cartService.updateCart(this.kosarTartalom);
   }
 
   osszesen(): number {
@@ -46,7 +46,7 @@ export class CartComponent implements OnInit {
   fizetes(): void {
     if (this.kosarTartalom.length > 0) {
       alert('Fizetés sikeres! 💳');
-      this.cartService.clearCart();
+      //this.cartService.clearCart();
       this.kosarBetoltes();
     } else {
       alert('A kosarad üres! 🛒');

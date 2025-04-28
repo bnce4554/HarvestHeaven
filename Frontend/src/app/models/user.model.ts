@@ -1,6 +1,7 @@
 export interface User {
-    id?: number;
-    nev: string;
+    nev_v_cegnev: string;
+    adoszam: string;
+    telefonszam: string;
     jelszo: string;
-    email: string;
+    felhasznalo_tipus: string;
 }

@@ -60,6 +60,104 @@
   }
   
   .buy-button:hover {
-    background: #218838;
+    background: #5a452e;
   }
+.card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.btn-success {
+    background-color: #5a452e;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #5a452e;
+}
+body {
+  background-color: #5a452e;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  border: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  text-align: center;
+  padding: 20px;
+  color: #5a452e;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #666;
+}
+
+.card-text.text-primary {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #5a452e;
+}
+
+.btn-success {
+  background-color: #5a452e;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+.btn-success:hover {
+  background-color: #5a452e;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filters select, .filters input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 200px;
+}
+
+@media (max-width: 768px) {
+  .filters {
+      flex-direction: column;
+      gap: 10px;
+  }
+}
+
   

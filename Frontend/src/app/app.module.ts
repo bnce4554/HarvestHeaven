@@ -24,28 +24,5 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent},
 ];
-@NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    ShopComponent,
-    AboutComponent,
-    CartComponent,
-    HeaderComponent,
-    LoginComponent,
-    RegisterComponent
-  ],
-  imports: [
-    FormsModule,
-    HttpdataService,
-    BrowserModule,
-    BrowserAnimationsModule, 
-    MatCardModule, 
-    MatButtonModule,
-    CommonModule,
-    RouterModule.forRoot([])
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
+
 export class AppModule { }

@@ -1,16 +1,44 @@
 <app-header></app-header>
-<div class="shop-container">
-	<h1 class="shop-title">Vásárlás</h1>
-	<div class="products">
-	  <div *ngFor="let product of termekek" class="product-card">
-		<img [src]="product.kep" alt="{{ product.nev }}" class="product-image">
-		<div class="product-details">
-		  <h2 class="product-name">név</h2>
-		  <p class="product-price">ár</p>
-		  <button class="buy-button">Kosárba</button>
-		</div>
-	  </div>
+<div class="container mt-4">
+	<div class="text-center">
+		<!---->
+	<mat-button-toggle-group name="gombok" aria-label="Font Style" [(ngModel)]="kivalasztottKategoria" (click)="termekSzures()">
+		<mat-button-toggle value="Gyümölcs" >Gyümölcs</mat-button-toggle>
+		<mat-button-toggle value="Minden termék">Minden termék</mat-button-toggle>
+		<mat-button-toggle value="Zöldség">Zöldség</mat-button-toggle>
+	  </mat-button-toggle-group>
 	</div>
-  </div>
+	<div class="row mt-3">
+		<div *ngIf="szurtTermek.length > 0;else nincskategoriaban">
+		<div class="col-md-4" *ngFor="let item of szurtTermek" >
+			<div class="card">
+			
+				<div class="card-body">
+					<h5 class="card-title">{{ item.termek_nev }}</h5>
+					<p class="card-text">{{ item.kategoria }}</p>
+					<p class="card-text">{{ item.szarmazasi_orszag }}</p>
+					<p class="card-text">{{ item.minoseg }}</p>
+					<img src="{{item.kep}}">
+					<button class="btn btn-success" (click)="addToCart(item)">Kosárba</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<ng-template #nincskategoriaban>
+		<div class="col-md-4" *ngFor="let item of termekek" >
+			<div class="card">
+			
+				<div class="card-body">
+					<h5 class="card-title">{{ item.termek_nev }}</h5>
+					<p class="card-text">{{ item.kategoria }}</p>
+					<p class="card-text">{{ item.szarmazasi_orszag }}</p>
+					<p class="card-text">{{ item.minoseg }}</p>
+					<button class="btn btn-success" (click)="addToCart(item)">Kosárba</button>
+				</div>
+			</div>
+		</div>
+	</ng-template>
+	</div>
+</div>
   <app-footer></app-footer>
   

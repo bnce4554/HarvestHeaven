@@ -14,9 +14,12 @@ return new class extends Migration
         Schema::create('termekek', function (Blueprint $table) {
             $table->id();
             $table->string('termek_nev');
+            $table->integer('ar');
             $table->string('kategoria');
             $table->string('szarmazasi_orszag');
             $table->integer('minoseg');
+            $table->string('kep');
+
         });
     }
 

@@ -3,15 +3,18 @@
     color: white;
     padding: 20px 0;
     text-align: center;
+    max-height: max-content;
   }
   
   .container {
     max-width: 1200px;
     margin: auto;
+
   }
   
   .footer-nav {
-    margin-top: 10px;
+    margin-top: 50px;
+    font-size: 2rem;
 
         display: inline-block;
       
@@ -26,5 +29,6 @@
   
   .footer-nav a:hover {
     text-decoration: underline;
+    color: #2e632e;
   }
   
