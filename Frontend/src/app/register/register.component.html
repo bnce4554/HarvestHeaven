@@ -1,0 +1,11 @@
+<app-header></app-header>
+<div class="register-container">
+    <h2>Regisztráció</h2>
+    <form (submit)="register()">
+      <input type="text" placeholder="Név" [(ngModel)]="name" required />
+      <input type="email" placeholder="Email" [(ngModel)]="email" required />
+      <input type="password" placeholder="Jelszó" [(ngModel)]="password" required />
+      <button type="submit">Regisztráció</button>
+    </form>
+  </div>
+<app-footer></app-footer>

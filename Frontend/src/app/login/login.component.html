@@ -1,0 +1,10 @@
+   <app-header></app-header>
+   <div class="login-container">
+  <h2>Bejelentkezés</h2>
+  <form (submit)="login()">
+    <input type="email" placeholder="Email" [(ngModel)]="user.email" required />
+    <input type="password" placeholder="Jelszó" [(ngModel)]="user.jelszo" required />
+    <button type="submit">Bejelentkezés</button>
+  </form>
+</div>
+<app-footer></app-footer>

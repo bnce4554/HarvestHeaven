@@ -1,0 +1,60 @@
+<div class="cart-container">
+	<app-header></app-header>
+  
+	<section class="cart-content">
+	  <h1>🛒 Kosár</h1>
+  
+	  <div *ngIf="kosarTartalom.length === 0" class="empty-cart">
+		<h2>A kosarad üres!</h2>
+		<p>Ne aggódj, válassz termékeket a boltban és tedd őket a kosárba.</p>
+		<a class="cta-btn" routerLink="/shop">Tovább a boltba</a>
+	  </div>
+  
+	  <div *ngIf="kosarTartalom.length > 0">
+		<div class="cart-items">
+		  <div class="cart-item" *ngFor="let item of kosarTartalom">
+			<div class="item-image">
+			  <img [src]="item.image" alt="{{ item.name }}">
+			</div>
+  
+			<div class="item-details">
+			  <h3>Név</h3>
+			  <p><strong>Kiszerelés:</strong></p>
+			  <p><strong>Eredet:</strong></p>
+  
+			  <div class="item-quantity">
+				<button (click)="darabszamCsokken(item)">-</button>
+				<input type="number"  min="1">
+				<button (click)="darabszamNo(item)">+</button>
+			  </div>
+  
+  
+			  <button (click)="eltavolitas(item)" class="remove-btn">❌ Eltávolítás</button>
+			</div>
+		  </div>
+		</div>
+  
+		<div class="cart-summary">
+		  <h2>🧾 Összegzés</h2>
+		  <div class="summary-item">
+			<span>Részösszeg:</span>
+			<span class="total-price">ár</span>
+		  </div>
+		  <div class="summary-item">
+			<span>Szállítás:</span>
+			<span class="shipping-fee">Ingyenes</span>
+		  </div>
+		  <div class="summary-total">
+			<span>Végösszeg:</span>
+			<span class="final-price">ár</span>
+		  </div>
+		  <div class="checkout">
+			<button class="cta-btn">💳 Tovább a fizetéshez</button>
+		  </div>
+		</div>
+	  </div>
+	</section>
+  
+	<app-footer></app-footer>
+  </div>
+  

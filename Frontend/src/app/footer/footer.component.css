@@ -1,0 +1,30 @@
+.footer {
+    background-color: #5a452e;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .footer-nav {
+    margin-top: 10px;
+
+        display: inline-block;
+      
+  }
+  
+  .footer-nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .footer-nav a:hover {
+    text-decoration: underline;
+  }
+  

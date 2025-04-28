@@ -1,0 +1,122 @@
+html{
+  background-image: "";
+}
+h1{
+  text-align: center;
+}
+.rolunk-container {
+  font-family: 'Roboto', sans-serif;
+}
+
+.rolunk {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  gap: 30px;
+}
+
+.rolunk-szoveg {
+  width: 60%;
+}
+
+.rolunk-szoveg h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.rolunk-szoveg p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.rolunk-kep img {
+  width: 100%;
+  border-radius: 8px;
+  max-width: 400px;
+}
+
+.csapat-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.csapat h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.csapat {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.csapat-member {
+  text-align: center;
+  max-width: 220px;
+}
+
+.csapat-member img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.leiras-section {
+  padding: 40px 20px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.leiras-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.leiras-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.kapcsolat-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.kapcsolat-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.kapcsolat-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.kapcsolat-section li {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .rolunk-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rolunk-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .rolunk-image img {
+    max-width: 80%;
+  }
+
+  .csapat {
+    flex-direction: column;
+    align-items: center;
+  }
+}
