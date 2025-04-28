@@ -19,8 +19,10 @@ class TermekekController extends Controller
         $validator = Validator::make($request->all(),
         [
             'termek_nev' => 'required',
+            'ar'=> 'required',
             'kategoria' => 'required',
-            'szarmazasi_orszag'=> 'required'
+            'szarmazasi_orszag' => 'required',
+            'minoseg' => 'required'
 
         ]);
 

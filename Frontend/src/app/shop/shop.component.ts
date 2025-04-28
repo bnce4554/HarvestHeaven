@@ -7,18 +7,18 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { Termek } from '../models/termek.model';
 import { HttpdataService } from '../httpdata.service';
 import { NgFor } from '@angular/common';
-import { FooterComponent } from '../footer/footer.component';
 import { HeaderComponent } from '../header/header.component';
 import { CartService } from '../cart.service';
 import { User } from '../models/user.model';
 import { MatButtonToggle, MatButtonToggleGroup } from '@angular/material/button-toggle';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-shop',
   templateUrl: './shop.component.html',
-  styleUrls: ['./shop.component.scss'],
-  imports:[ NgFor,MatButtonToggleGroup,MatButtonToggle, MatCardModule, MatButtonModule, MatToolbarModule, CommonModule, FooterComponent, HeaderComponent, FormsModule]
+  styleUrls: ['./shop.component.css'],
+  imports:[NgFor,MatButtonToggleGroup,MatButtonToggle, MatCardModule, MatButtonModule, MatToolbarModule, CommonModule, FooterComponent, HeaderComponent, FormsModule]
 })
 
  export class ShopComponent{
@@ -55,7 +55,7 @@ import { FormsModule } from '@angular/forms';
     //this.cartService.addToCart(product);
     this.cartService.addToCart(product)
     alert(`${product.termek_nev} hozzáadva a kosárhoz!`);
-  }
+  } 
   termekSzures(): void {
     this.szurtTermek=[];
     for (let i = 0; i < this.termekek.length; i++) {

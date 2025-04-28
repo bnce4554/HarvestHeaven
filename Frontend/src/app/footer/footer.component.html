@@ -1,12 +1,36 @@
-<footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Harvest Heaven. Minden jog fenntartva.</p>
-      <ul class="footer-nav">
-        <li><a routerLink="/">Kezdőlap</a></li>
-        <li><a routerLink="/shop">Vásárlás</a></li>
-        <li><a routerLink="/about">Rólunk</a></li>
-        <li><a routerLink="/cart">Kosár</a></li>
-        <li><a routerLink="/login">Bejelentkezés</a></li>
-      </ul>
+<footer style="background-color: #5a452e; color: white;">
+  <div class="container py-5" style="background-color: #5a452e; color: white;">
+    <div class="row py-4" style="background-color: #5a452e; color: white;">
+      <div class="col-lg-4 col-md-6 mb-4 mb-lg-0" style="background-color: #5a452e; color: white;">
+        <h6 class="text-uppercase font-weight-bold mb-4" style="background-color: #5a452e; color: white;">Telefon</h6>
+        <p class="font-italic text-light">+36 70 218 2111</p>
+        <p class="font-italic text-light">+36 70 643 5511</p>
+        <h6 class="text-uppercase font-weight-bold mb-4">Email</h6>
+        <p class="font-italic text-light">szurdok.bence&#64;szikszi-ozd.hu</p>
+        <p class="font-italic text-light">havran.tibor&#64;szikszi-ozd.hu</p>
+      </div>
+      <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+        <h6 class="text-uppercase font-weight-bold mb-4">Harvest Heaven</h6>
+        <ul class="list-unstyled mb-0">
+          <li class="mb-2"><a [routerLink]="['/login']" class="text-light">Bejelentkezés</a></li>
+          <li class="mb-2"><a [routerLink]="['/register']" class="text-light">Regisztráció</a></li>
+          <li class="mb-2"><a [routerLink]="['/about']" class="text-light">Rólunk</a></li>
+          <li class="mb-2"><a [routerLink]="['/shop']" class="text-light">Termékek</a></li>
+          <li class="mb-2"><a [routerLink]="['/feltoltes']" class="text-light">Termék feltöltése</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-lg-0" style="background-color: #5a452e; color: white;">
+        <h6 class="text-uppercase font-weight-bold mb-4" style="background-color: #5a452e; color: white;">Hírlevél</h6>
+        <p class="text-light mb-4" style="background-color: #5a452e; color: white;">Iratkozz fel hírlevelünkre, ha nem szeretnél lemaradni a bővülő termékkínálatokról!</p>
+        <div class="p-1 rounded border">
+          <div class="input-group">
+            <input type="email" placeholder="Add meg az email címed" aria-describedby="button-addon1" class="form-control border-0 shadow-0">
+            <div class="">
+              <button id="button-addon1" type="submit" class="btn btn-link"></button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </footer>
+  </div>
+</footer>

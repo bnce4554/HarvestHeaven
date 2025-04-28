@@ -1,0 +1,64 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "HHrendelesek",
+    "collectionId": "75259791-5c47-4056-a243-26f3289adc32",
+    "dateExported": "2025-04-28T07:26:22.757Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "417875df-ee26-452a-bd69-d108e6572688",
+            "colId": "75259791-5c47-4056-a243-26f3289adc32",
+            "containerId": "",
+            "name": "getRendelesek",
+            "url": "http://127.0.0.1:8000/api/rendelesek",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2025-03-25T07:34:46.139Z",
+            "modified": "2025-03-25T07:34:56.413Z",
+            "headers": []
+        },
+        {
+            "_id": "94bc24dc-10ed-4345-89c5-8b0ed913aeab",
+            "colId": "75259791-5c47-4056-a243-26f3289adc32",
+            "containerId": "",
+            "name": "postRendelesek",
+            "url": "http://127.0.0.1:8000/api/rendelesek",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2025-04-28T06:49:45.947Z",
+            "modified": "2025-04-28T07:17:57.606Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"TermekId\":1,\n  \"eladoId\":1,\n  \"vasarloId\":1,\n  \"HirdetesId\":1\n}\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "6a8c107e-340f-4545-8ea2-2f6446f223b6",
+            "colId": "75259791-5c47-4056-a243-26f3289adc32",
+            "containerId": "",
+            "name": "getByIdRendelesek",
+            "url": "http://127.0.0.1:8000/api/rendelesek/5",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2025-04-28T07:18:20.911Z",
+            "modified": "2025-04-28T07:18:30.220Z",
+            "headers": []
+        },
+        {
+            "_id": "4b751aaf-84d2-41d8-bb1f-c147f402c8f8",
+            "colId": "75259791-5c47-4056-a243-26f3289adc32",
+            "containerId": "",
+            "name": "deleteRendelesek",
+            "url": "http://127.0.0.1:8000/api/rendelesek/5",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2025-04-28T07:18:44.250Z",
+            "modified": "2025-04-28T07:18:53.102Z",
+            "headers": []
+        }
+    ],
+    "ref": "myQ_kKrOd9_AxIhC-FpVNG7-WPeMGJOYHhZmH2LWxpBLaoPrDrd3xJzimz3OmCWRPSb4gM2jmEnqu0PWBnmNbQ"
+}

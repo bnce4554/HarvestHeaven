@@ -1,0 +1,81 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "HHfelhasznalok",
+    "collectionId": "19300539-1675-4173-b17e-e27ad4f03c43",
+    "dateExported": "2025-04-28T10:26:34.789Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "74bb7a8b-fd09-4e3a-889d-0ba7530d6e23",
+            "colId": "19300539-1675-4173-b17e-e27ad4f03c43",
+            "containerId": "",
+            "name": "getFelhasznalok",
+            "url": "http://127.0.0.1:8000/api/felhasznalok/",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2025-04-28T07:27:11.363Z",
+            "modified": "2025-04-28T07:27:36.368Z",
+            "headers": []
+        },
+        {
+            "_id": "96bf3e44-007f-4a74-b0b4-f8c42410797a",
+            "colId": "19300539-1675-4173-b17e-e27ad4f03c43",
+            "containerId": "",
+            "name": "postFelhasznalok",
+            "url": "http://127.0.0.1:8000/api/felhasznalok/",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2025-04-28T07:27:43.335Z",
+            "modified": "2025-04-28T10:23:14.950Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nev\":\"teszt béla\",\n  \"adoszam\":1234567,\n  \"felhasznaloTipus\":\"Eladó\",\n  \"jelszo\":\"teszt123\",\n  \"telefonszam\":\"+36 30 123 4567\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "f634cfd9-bbd2-4989-8103-ba0a1fbf9264",
+            "colId": "19300539-1675-4173-b17e-e27ad4f03c43",
+            "containerId": "",
+            "name": "getByIdFelhasznalok",
+            "url": "http://127.0.0.1:8000/api/felhasznalok/11/",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2025-04-28T10:23:22.280Z",
+            "modified": "2025-04-28T10:23:58.698Z",
+            "headers": []
+        },
+        {
+            "_id": "b6d2a681-e9aa-4403-9186-0b11b6eb0099",
+            "colId": "19300539-1675-4173-b17e-e27ad4f03c43",
+            "containerId": "",
+            "name": "deleteFelhasznalok",
+            "url": "http://127.0.0.1:8000/api/felhasznalok/11/",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2025-04-28T10:24:25.438Z",
+            "modified": "2025-04-28T10:24:36.879Z",
+            "headers": []
+        },
+        {
+            "_id": "c6c5c738-496d-450f-afca-e3224c2f56df",
+            "colId": "19300539-1675-4173-b17e-e27ad4f03c43",
+            "containerId": "",
+            "name": "updateFelhasznalok",
+            "url": "http://127.0.0.1:8000/api/felhasznalok/10/",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2025-04-28T10:24:55.052Z",
+            "modified": "2025-04-28T10:25:49.455Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nev\":\"név\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "5pW3xeC5TeWmHgwwlryD5fpLi_yddro0ky4CqWzcX3zw2X4kjsiiKVLiGKh6i9XUiWYkMzo4FeFqm2mip_gcog"
+}

@@ -18,9 +18,10 @@ class RendelesController extends Controller
     { 
         $validator = Validator::make($request->all(),
         [
-            'Termek' => 'required',
-            'Elado' => 'required',
-            'Vasarlo' => 'required'
+            'TermekId' => 'required',
+            'eladoId' => 'required',
+            'HirdetesId' => 'required',
+            'vasarloId' => 'required'
         ]);
 
         if($validator->fails())

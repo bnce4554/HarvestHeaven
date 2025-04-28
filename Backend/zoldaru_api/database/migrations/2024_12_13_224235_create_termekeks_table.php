@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('kategoria');
             $table->string('szarmazasi_orszag');
             $table->integer('minoseg');
-            $table->string('kep');
+            $table->string('kep')->nullable();
 
         });
     }

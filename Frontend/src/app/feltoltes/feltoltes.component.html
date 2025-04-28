@@ -1,0 +1,31 @@
+<app-header></app-header>
+<div class="hatter">
+<div class="container-fluid pt-5">
+    <div class="row">
+        <div class="col-12 col-md-12 pb-3">
+            <h1>Termék feltöltése</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-6 mx-auto">
+            <div class="form">
+                <form (submit)="feltolt()" class="login-form">
+                  <input type="text" name="termek_nev" placeholder="Termék neve" [(ngModel)]="termekek.termek_nev"  required />
+                  <input type="text" name="ar" placeholder="Termék ára Ft/Kg" [(ngModel)]="termekek.ar"  required />
+                  <mat-button-toggle-group name="gombok" aria-label="Font Style" [(ngModel)]="termekek.kategoria">
+                  <mat-button-toggle style="text-align: center;" value="Zöldség" >Zöldség</mat-button-toggle>
+                  <mat-button-toggle style="text-align: center;" value="Gyümölcs" >Gyümölcs</mat-button-toggle>
+                  </mat-button-toggle-group>
+                  <p></p>
+                  <input type="text" name="szarmazasi_orszag" placeholder="Termék származása" [(ngModel)]="termekek.szarmazasi_orszag"  required />
+                  <input type="string" name="minoseg" placeholder="Termék minősége(1/2)" [(ngModel)]="termekek.minoseg" required />
+                  <input type="file" name="kep" placeholder="Termék képe" [(ngModel)]="termekek.kep"/>
+                 <button type="submit">Feltöltés</button>
+                </form>
+                </div>
+        </div>
+    </div>
+</div>
+</div>
+<app-footer></app-footer>
+

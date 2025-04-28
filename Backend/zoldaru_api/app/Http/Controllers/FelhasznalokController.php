@@ -21,7 +21,9 @@ class FelhasznalokController extends Controller
         [
             'nev' => 'required',
             'adoszam' => 'required',
-            'felhasznaloTipus' => 'required'
+            'felhasznaloTipus' => 'required',
+            'jelszo' => 'required',
+            'telefonszam' => 'required'
         ]);
 
         if($validator->fails())
@@ -57,16 +59,7 @@ class FelhasznalokController extends Controller
         if(is_null($felhasznalok))
                 return response()->json(['Hiba:'=>'A felhasználó nem létezik!'],404);
         
-        $validator = Validator::make($request->all(),
-        [
-            'nev_v_cegnev' => 'required',
-            'adoszam' => 'required',
-            'felhasznalo_tipus' => 'required'
-        ]
-        );
-        if($validator->fails()){
-            return response()->json(['Hiba' => 'Fontos adatok hiányoznak!'],402);
-        }
+
 
         $felhasznalok -> update($request->all());
         return response()->json(['Következő id-jű Felhasználó adatai megváltoztak' => $felhasznalok->id],201);

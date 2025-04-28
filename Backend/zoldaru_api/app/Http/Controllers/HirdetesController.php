@@ -18,8 +18,10 @@ class HirdetesController extends Controller
     { 
         $validator = Validator::make($request->all(),
         [
+            'Felhasznalok'=> 'required',
             'Termek' => 'required',
             'termek_egysege' => 'required',
+            'Termek_mennyisege'=> 'required',
             'brutto_egysegar' => 'required'
         ]);
 
@@ -41,6 +43,7 @@ class HirdetesController extends Controller
         
         $validator = Validator::make($request->all(),
         [
+            'Felhasznalok'=> 'required',
             'Termek' => 'required',
             'termek_egysege' => 'required',
             'brutto_egysegar' => 'required'

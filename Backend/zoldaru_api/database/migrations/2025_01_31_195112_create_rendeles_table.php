@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('rendelesek', function (Blueprint $table) {
             $table->id();
-            $table->string('rendeles_ideje');
+            $table->string('rendeles_ideje')->nullable();
             $table->foreignId('eladoId')->references('id')->on('felhasznalok');
             $table->integer('vasarloId');
             $table->integer('HirdetesId');

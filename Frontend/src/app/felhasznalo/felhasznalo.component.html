@@ -1,0 +1,15 @@
+<app-header></app-header>
+<div class="hatter">
+<div class="login-page">
+  <div class="form">
+    <form class="login-form">
+      <h2>Felhasználói adatok</h2>
+      <p>Felhasználó neve:{{auth.getUser()()?.nev}}</p>
+      <p>Felhasználó adószáma:{{auth.getUser()()?.adoszam}}</p>
+      <p>Felhasználó telefonszáma:{{auth.getUser()()?.telefonszam}}</p>
+      <p>Felhasználó típusa:{{auth.getUser()()?.felhasznaloTipus}}</p>
+    </form>
+  </div>
+</div>
+<app-footer></app-footer>
+</div>

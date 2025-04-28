@@ -1,0 +1,105 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "HHhirdetesek",
+    "collectionId": "753141c1-f98b-47a7-92d9-9868d8ac473c",
+    "dateExported": "2025-04-28T07:26:09.832Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "dd64d7f4-dd13-423f-b6ca-3d0ccf865b02",
+            "colId": "753141c1-f98b-47a7-92d9-9868d8ac473c",
+            "containerId": "",
+            "name": "getHirdetesek",
+            "url": "http://127.0.0.1:8000/api/hirdetesek",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2025-03-25T07:34:08.654Z",
+            "modified": "2025-03-25T07:34:25.181Z",
+            "headers": []
+        },
+        {
+            "_id": "3fba994d-4cb2-4909-9b9c-cc1094a0b6e0",
+            "colId": "753141c1-f98b-47a7-92d9-9868d8ac473c",
+            "containerId": "",
+            "name": "postHirdetesek",
+            "url": "http://127.0.0.1:8000/api/hirdetesek",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2025-04-28T07:20:28.580Z",
+            "modified": "2025-04-28T07:21:32.501Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"Felhasznalok\":1,\n  \"Termek\":1,\n  \"termek_egysege\":4,\n  \"Termek_mennyisege\":20,\n  \"brutto_egysegar\":600\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "34e62422-a885-4813-a6c7-12b3e8f6c331",
+            "colId": "753141c1-f98b-47a7-92d9-9868d8ac473c",
+            "containerId": "",
+            "name": "getByIdHirdetesek",
+            "url": "http://127.0.0.1:8000/api/hirdetesek/2",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2025-04-28T07:22:55.070Z",
+            "modified": "2025-04-28T07:23:13.617Z",
+            "headers": []
+        },
+        {
+            "_id": "6fc11f87-0811-4bc1-b5aa-c08b18aab00c",
+            "colId": "753141c1-f98b-47a7-92d9-9868d8ac473c",
+            "containerId": "",
+            "name": "getCheaperHirdetesek",
+            "url": "http://127.0.0.1:8000/api/hirdetesek/olcsobb/400",
+            "method": "GET",
+            "sortNum": 25000,
+            "created": "2025-04-28T07:23:31.820Z",
+            "modified": "2025-04-28T07:25:11.531Z",
+            "headers": []
+        },
+        {
+            "_id": "80ac5018-0fc6-4647-b841-db7c0248c530",
+            "colId": "753141c1-f98b-47a7-92d9-9868d8ac473c",
+            "containerId": "",
+            "name": "updateHirdetesek",
+            "url": "http://127.0.0.1:8000/api/hirdetesek/2",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2025-04-28T07:21:43.571Z",
+            "modified": "2025-04-28T07:22:36.970Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"Felhasznalok\":1,\n  \"Termek\":1,\n  \"termek_egysege\":5,\n  \"Termek_mennyisege\":10,\n  \"brutto_egysegar\":650\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "abbab77f-c74b-4e94-bcd7-49171fcbf25f",
+            "colId": "753141c1-f98b-47a7-92d9-9868d8ac473c",
+            "containerId": "",
+            "name": "getMoreExpensiveHirdetesek",
+            "url": "http://127.0.0.1:8000/api/hirdetesek/dragabb/150",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2025-04-28T07:23:29.219Z",
+            "modified": "2025-04-28T07:24:33.680Z",
+            "headers": []
+        },
+        {
+            "_id": "7866f452-0d4b-4be5-b339-00f334dac24c",
+            "colId": "753141c1-f98b-47a7-92d9-9868d8ac473c",
+            "containerId": "",
+            "name": "deleteHirdetesek",
+            "url": "http://127.0.0.1:8000/api/hirdetesek/2",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2025-04-28T07:25:28.315Z",
+            "modified": "2025-04-28T07:25:37.084Z",
+            "headers": []
+        }
+    ],
+    "ref": "3pDDTFWf6kB4OBRwzoSeyvZKi6aQnl-Q8Liacgfk0EgmfDFUkdPpY0-dgQYEonW_f6E34vuMjD8aZQvTUs4mYQ"
+}

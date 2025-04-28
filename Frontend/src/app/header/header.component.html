@@ -1,14 +1,23 @@
 <header class="header">
-    <div class="logo">Harvest Heaven</div>
+  <div class="logo">Harvest Heaven</div>
+  <ul *ngIf="auth.getUser()();else nincsbejelentkezve" class="nav-links">
+    <li><a routerLink="/">Kezdőlap</a></li>
+    <li><a routerLink="/shop">Vásárlás</a></li>
+    <li><a routerLink="/about">Rólunk</a></li>
+    <li><a routerLink="/cart">Kosár</a></li>
+    <li><a (click)="auth.logout()">Kijelentkezés</a></li>
+    <li><a routerLink="/felhasznalo">{{auth.getUser()()?.nev}}</a></li>
+  </ul>
+  <ng-template  #nincsbejelentkezve>
     <ul class="nav-links">
-      <li><a routerLink="/">Kezdőlap</a></li>
-      <li><a routerLink="/shop">Vásárlás</a></li>
-      <li><a routerLink="/about">Rólunk</a></li>
-      <li><a routerLink="/cart">Kosár</a></li>
-      <li><a routerLink="/login">Bejelentkezés</a></li>
-      <li><a routerLink="/register">Regisztráció</a></li>
-
-    </ul>
-  </header>
+    <li><a routerLink="/">Kezdőlap</a></li>
+    <li><a routerLink="/shop">Vásárlás</a></li>
+    <li><a routerLink="/about">Rólunk</a></li>
+    <li><a routerLink="/cart">Kosár</a></li>
+    <li><a routerLink="/login">Bejelentkezés</a></li>
+    <li><a routerLink="/register">Regisztráció</a></li>
+  </ul>
+    </ng-template>
+</header>
 
           

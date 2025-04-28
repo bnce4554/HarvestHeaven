@@ -18,9 +18,9 @@ return new class extends Migration
             $table->string('termek_egysege');
             $table->integer('Termek_mennyisege');
             $table->integer('brutto_egysegar');
-            $table->integer('netto_egysegar');
-            $table->string('leiras');
-            $table->string('letrehozas_datuma');
+            $table->integer('netto_egysegar')->nullable();
+            $table->string('leiras')->nullable();
+            $table->string('rendeles_ideje')->nullable();
         });
     }
 

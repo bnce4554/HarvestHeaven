@@ -1,0 +1,81 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "HHtermekek",
+    "collectionId": "9026d134-d9e1-4bab-aac0-bff87b11da56",
+    "dateExported": "2025-04-28T07:25:48.722Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "7ef7131c-6aff-4b2c-babf-b08a24b111c5",
+            "colId": "9026d134-d9e1-4bab-aac0-bff87b11da56",
+            "containerId": "",
+            "name": "hh_getpi",
+            "url": "http://127.0.0.1:8000/api/termekek",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2025-02-21T09:57:16.647Z",
+            "modified": "2025-03-25T07:33:41.615Z",
+            "headers": []
+        },
+        {
+            "_id": "5f77caff-de22-41d6-942a-7d494b78d708",
+            "colId": "9026d134-d9e1-4bab-aac0-bff87b11da56",
+            "containerId": "",
+            "name": "hh_post",
+            "url": "http://127.0.0.1:8000/api/termekek",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2025-03-25T07:22:37.005Z",
+            "modified": "2025-03-25T07:32:56.786Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"termek_nev\":\"szőlő\",\n  \"kategoria\":\"gyümölcs\",\n  \"szarmazasi_orszag\":\"Görögország\",\n  \"minoseg\":1\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "0f01d3f7-4afd-46e7-bac4-cdca7bef5991",
+            "colId": "9026d134-d9e1-4bab-aac0-bff87b11da56",
+            "containerId": "",
+            "name": "termekek_uodate",
+            "url": "http://127.0.0.1:8000/api/termekek/4",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2025-03-25T07:35:55.704Z",
+            "modified": "2025-03-25T21:37:00.688Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"termek_nev\":\"Uborka\",\n  \"kategoria\":\"Zöldség\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "22994896-ebab-46b3-8d28-45b1279d9353",
+            "colId": "9026d134-d9e1-4bab-aac0-bff87b11da56",
+            "containerId": "",
+            "name": "destroy_termekek",
+            "url": "http://127.0.0.1:8000/api/termekek/5",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2025-03-25T07:40:43.134Z",
+            "modified": "2025-03-25T21:40:24.201Z",
+            "headers": []
+        },
+        {
+            "_id": "0d0fe088-7a37-401e-9aa5-c736403c0c9b",
+            "colId": "9026d134-d9e1-4bab-aac0-bff87b11da56",
+            "containerId": "",
+            "name": "getByIdTermekek",
+            "url": "http://127.0.0.1:8000/api/termekek/5",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2025-04-28T07:19:39.633Z",
+            "modified": "2025-04-28T07:19:49.320Z",
+            "headers": []
+        }
+    ],
+    "ref": "r8FwlCCVXfjYrSwHkta63Dsq_U4HcH_UqovD7zyryJ8DsjM7RjxR3j2MO30dRTyzjCM1ebBtcPOmWtIXQQkZvg"
+}

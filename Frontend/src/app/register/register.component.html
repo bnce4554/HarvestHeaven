@@ -1,11 +1,28 @@
 <app-header></app-header>
-<div class="register-container">
-    <h2>Regisztráció</h2>
-    <form (submit)="register()">
-      <input type="text" placeholder="Név" [(ngModel)]="name" required />
-      <input type="email" placeholder="Email" [(ngModel)]="email" required />
-      <input type="password" placeholder="Jelszó" [(ngModel)]="password" required />
+<div class="hatter">
+<div class="login-page">
+  <div class="form">
+    <form (submit)="register()" class="login-form">
+      <h2>Regisztráció</h2>
+      <p></p>
+      <input type="text" name="nev" placeholder="Név" [(ngModel)]="user.nev" required />
+      <p></p>
+      <input type="password" name="jelszo" placeholder="Jelszó" [(ngModel)]="user.jelszo" required />
+      <p></p>
+      <input type="text" name="adoszam" placeholder="Adószám" [(ngModel)]="user.adoszam" required>
+      <p></p>
+      <input type="text" name="telefon" placeholder="Telefonszám" [(ngModel)]="user.telefonszam" required>
+      <p></p>
+      <mat-button-toggle-group name="gombok" aria-label="Font Style" [(ngModel)]="user.felhasznaloTipus">
+        <mat-button-toggle style="text-align: center;" value="Eladó" >Eladó</mat-button-toggle>
+        <mat-button-toggle style="text-align: center;" value="Mindkettő">Mindkettő</mat-button-toggle>
+        <mat-button-toggle style="text-align: center;" value="Vásárló">Vásárló</mat-button-toggle>
+        </mat-button-toggle-group>
+        <p></p>
+        <p></p>
       <button type="submit">Regisztráció</button>
     </form>
   </div>
+</div>
 <app-footer></app-footer>
+</div>

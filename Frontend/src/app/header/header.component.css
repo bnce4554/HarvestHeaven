@@ -14,6 +14,8 @@
     text-transform: uppercase;
     letter-spacing: 2px;
   }
+
+
   
   .nav-links {
     
@@ -36,7 +38,7 @@
   }
   
   .nav-links a:hover {
-    color: #2e632e;
+    color: #2071bd;
   }
   
   @media (max-width: 768px) {

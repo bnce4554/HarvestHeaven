@@ -1,44 +1,52 @@
 <app-header></app-header>
-<div class="container mt-4">
+<div class="container-fluid pt-4">
 	<div class="text-center">
-		<!---->
 	<mat-button-toggle-group name="gombok" aria-label="Font Style" [(ngModel)]="kivalasztottKategoria" (click)="termekSzures()">
 		<mat-button-toggle value="Gyümölcs" >Gyümölcs</mat-button-toggle>
 		<mat-button-toggle value="Minden termék">Minden termék</mat-button-toggle>
 		<mat-button-toggle value="Zöldség">Zöldség</mat-button-toggle>
 	  </mat-button-toggle-group>
 	</div>
-	<div class="row mt-3">
-		<div *ngIf="szurtTermek.length > 0;else nincskategoriaban">
-		<div class="col-md-4" *ngFor="let item of szurtTermek" >
-			<div class="card">
-			
-				<div class="card-body">
-					<h5 class="card-title">{{ item.termek_nev }}</h5>
-					<p class="card-text">{{ item.kategoria }}</p>
-					<p class="card-text">{{ item.szarmazasi_orszag }}</p>
-					<p class="card-text">{{ item.minoseg }}</p>
-					<img src="{{item.kep}}">
-					<button class="btn btn-success" (click)="addToCart(item)">Kosárba</button>
-				</div>
-			</div>
+	<div class="row">
+		<div *ngIf="szurtTermek.length > 0;else nincskategoriaban"></div>
+		<div class="col-md-2" *ngFor="let item of szurtTermek" >
+					<div class="card">
+						<img [src]="item.kep" class="card-img-top mx-4" style="text-align: center; height: 150px; width: 150px; width: 18rem;">
+						<div class="card-body">
+							<h5 class="card-title" style="text-align: center;">{{item.termek_nev}}</h5>
+							<div class="row">
+								<div style="text-align: center;">
+									<h5 class="card-text">{{item.minoseg}} osztály</h5>
+								</div>
+								<div class="col-md4 mb3"></div>
+							<h5 class="card-text" style="text-align: center;">{{item.szarmazasi_orszag}}</h5>
+						</div>
+						<div style="text-align: center;">
+							<button class="btn btn-dark btn-sm" (click)="addToCart(item)">Kosárba</button>
+						</div>
+					</div>
 		</div>
 	</div>
 	<ng-template #nincskategoriaban>
-		<div class="col-md-4" *ngFor="let item of termekek" >
+		<div class="col-md-2" *ngFor="let item of termekek" >
 			<div class="card">
-			
+				<img [src]="item.kep" class="card-img-top mx-4" style="text-align: center; height: 150px; width: 18rem;">
 				<div class="card-body">
-					<h5 class="card-title">{{ item.termek_nev }}</h5>
-					<p class="card-text">{{ item.kategoria }}</p>
-					<p class="card-text">{{ item.szarmazasi_orszag }}</p>
-					<p class="card-text">{{ item.minoseg }}</p>
-					<button class="btn btn-success" (click)="addToCart(item)">Kosárba</button>
+					<h5 class="card-title" style="text-align: center;">{{item.termek_nev}}</h5>
+					<div class="row">
+						<div style="text-align: center;">
+							<h5 class="card-text">{{item.minoseg}} osztály</h5>
+						</div>
+						<div class="col-md4 mb3"></div>
+					<h5 class="card-text" style="text-align: center;">{{item.szarmazasi_orszag}}</h5>
+				</div>
+				<div style="text-align: center;">
+					<button class="btn btn-dark btn-sm" (click)="addToCart(item)">Kosárba</button>
 				</div>
 			</div>
+</div>
 		</div>
 	</ng-template>
-	</div>
 </div>
   <app-footer></app-footer>
   
