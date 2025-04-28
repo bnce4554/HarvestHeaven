@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('felhasznalok', function (Blueprint $table) {
             $table->id();
-            $table->string('nev_v_cegnev');
+            $table->string('nev');
             $table->string('adoszam')->unique();
             $table->string('telefonszam')->unique();
             $table->string('jelszo');
-            $table->string('felhasznalo_tipus');
+            $table->string('felhasznaloTipus');
         });
     }
 

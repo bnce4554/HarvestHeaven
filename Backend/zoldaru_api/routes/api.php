@@ -11,6 +11,7 @@ use App\Http\Controllers\RendelesController;
 
 Route::get('/felhasznalok',[FelhasznalokController::class,'index']);
 Route::post('/felhasznalok',[FelhasznalokController::class, 'store']);
+Route::post('/felhasznalok/bejelentkezes',[FelhasznalokController::class,'login']);
 Route::put('/felhasznalok/{id}',[FelhasznalokController::class,'update']);
 Route::delete('/felhasznalok/{id}',[FelhasznalokController::class,'delete']);
 Route::get('/felhasznalok/{id}',[FelhasznalokController::class,'getById']);

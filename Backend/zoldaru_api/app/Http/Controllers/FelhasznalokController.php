@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Felhasznalok;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-
+use Illuminate\Support\Facades\Hash;
 
 class FelhasznalokController extends Controller
 {
@@ -19,21 +19,38 @@ class FelhasznalokController extends Controller
     { 
         $validator = Validator::make($request->all(),
         [
-            'nev_v_cegnev' => 'required',
+            'nev' => 'required',
             'adoszam' => 'required',
-            'felhasznalo_tipus' => 'required'
+            'felhasznaloTipus' => 'required'
         ]);
 
         if($validator->fails())
         {
             return response()->json(['message' => 'Fontos adat hiányzik'], 400);
         }
+        $password = Hash::make($request->jelszo);
+        $felhasznalok = Felhasznalok::create([
+            'nev'=>$request->nev,
+            'adoszam'=>$request->adoszam,
+            'telefonszam'=>$request->telefonszam,
+            'felhasznaloTipus'=>$request->felhasznaloTipus,
+            'jelszo'=>$password
 
-        $felhasznalok = Felhasznalok::create($request->all());
+        ]);
         return response()->json(['id' => $felhasznalok->id],202);
     }
-
     
+
+    public function login(Request $request){
+        $existingUser = Felhasznalok::where('nev','=',$request->nev)->first();
+        if (!is_null($existingUser)) {
+            
+            if (Hash::check($request->jelszo, $existingUser->jelszo)) {
+                return $existingUser;
+            }
+        }
+    }
+
     public function update(Request $request, $id)
     {
         $felhasznalok = Felhasznalok::find($id);
