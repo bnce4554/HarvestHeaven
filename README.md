@@ -9,7 +9,7 @@ Szükséges alkalmazások:
 
 Beüzemelés:
 -Telepítsük a a XAMMP-ot, a Git-et és a Composert
--Indítsuk el a XAMPP-ot azon belül az első és a második szervert majd migráljuk az adatbázis a Backenből.
+-Indítsuk el a XAMPP-ot azon belül az első és a második szervert majd migráljuk az adatbázis a Backendből.
 - A Frontendhez telepítsük a Node.js-t majd nyissuk meg a Visual Studio Code-ot és azon belül a terminálban az "-npm i" paranccsal telepítsük azt.
 - Ezután indítsuk el a szervert Backendben és Frontendben is. Backen eseten terminálba a 'php artisan serve' paranccsal, Frontent esetén pedig szintúgy terminálban az 'ng serve' paranccsal.
 
