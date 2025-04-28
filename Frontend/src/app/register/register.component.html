@@ -2,15 +2,9 @@
 <div class="register-container">
     <h2>Regisztráció</h2>
     <form (submit)="register()">
-      <input type="text" name="nev" placeholder="Név" [(ngModel)]="user.nev" required />
-      <input type="password" name="jelszo" placeholder="Jelszó" [(ngModel)]="user.jelszo" required />
-      <input type="text" name="adoszam" placeholder="Adószám" [(ngModel)]="user.adoszam" required>
-      <input type="text" name="telefon" placeholder="Telefonszám" [(ngModel)]="user.telefonszam" required>
-      <mat-button-toggle-group name="gombok" aria-label="Font Style" [(ngModel)]="user.felhasznaloTipus">
-        <mat-button-toggle value="Eladó" >ELadó</mat-button-toggle>
-        <mat-button-toggle value="Mindkettő">Mindkettő</mat-button-toggle>
-        <mat-button-toggle value="Vásárló">Vásárló</mat-button-toggle>
-        </mat-button-toggle-group>
+      <input type="text" placeholder="Név" [(ngModel)]="name" required />
+      <input type="email" placeholder="Email" [(ngModel)]="email" required />
+      <input type="password" placeholder="Jelszó" [(ngModel)]="password" required />
       <button type="submit">Regisztráció</button>
     </form>
   </div>

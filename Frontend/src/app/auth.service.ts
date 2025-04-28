@@ -8,7 +8,7 @@ import { Observable, tap } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:8000/api';
+  private apiUrl = 'http://localhost:3000/api';
   private loggedInUser = signal<User | null>(null);
 
   constructor(private http: HttpClient, private router: Router) {
@@ -23,16 +23,16 @@ export class AuthService {
     }
   }
 
-  register(user:User): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/felhasznalok`,user);
+  register(nev: string, email: string, jelszo: string): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/register`, { nev, email, jelszo});
   }
 
-  login(user:User): Observable<User> {
-    return this.http.post<User>(`${this.apiUrl}/felhasznalok/bejelentkezes`, user).pipe(
+  login(nev: string, jelszo: string): Observable<User> {
+    return this.http.post<User>(`${this.apiUrl}/login`, { nev, jelszo}).pipe(
       tap(user => {
         this.loggedInUser.set(user);
         localStorage.setItem('user', JSON.stringify(user));
-        this.router.navigate(['/']);
+        this.router.navigate(['/aloldal']);
       })
     );
   }

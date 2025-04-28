@@ -13,19 +13,15 @@ import { HeaderComponent } from '../header/header.component';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  user: User = {nev: '', jelszo: '', telefonszam: '', adoszam: '', felhasznaloTipus: '' };  message: string = '';
+  user: User = { nev_v_cegnev: '', jelszo: '', telefonszam: '', adoszam: '', felhasznalo_tipus: '' };  message: string = '';
 
   constructor(private auth: AuthService) {}
   login() {
-    this.auth.login(this.user).subscribe({
+    this.auth.login(this.user.nev_v_cegnev, this.user.jelszo).subscribe({
       next: () => {
         this.message = 'Sikeres bejelentkezés!';
       },
 
     });
-
-  }
-  logout() {
-    this.auth.logout();
   }
 }

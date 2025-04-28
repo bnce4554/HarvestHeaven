@@ -3,14 +3,6 @@
     padding: 40px;
     background-color: #f8f9fa;
   }
-  .asd {
-    text-align: center;
-  }
-  @media (min-width: 1025px) {
-    .h-custom {
-    height: 100vh !important;
-    }
-    }
   
   .cart-content {
     max-width: 900px;
